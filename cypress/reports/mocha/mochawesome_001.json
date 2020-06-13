@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-05-21T03:41:51.795Z",
+    "end": "2020-05-21T03:42:13.036Z",
+    "duration": 21241,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c966e85c-8c57-4660-8937-6b84c6ecc4f6",
+      "title": "",
+      "fullFile": "cypress\\integration\\NSWGovPOD\\HomePage.spec.js",
+      "file": "cypress\\integration\\NSWGovPOD\\HomePage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3fa1f565-4087-4601-8ea2-5381092906a1",
+          "title": "NSW.GOV.AU Home Page Cypress Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Visits NSW.GOV.AU and check Page Title",
+              "fullTitle": "NSW.GOV.AU Home Page Cypress Test Visits NSW.GOV.AU and check Page Title",
+              "timedOut": null,
+              "duration": 15781,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.nsw.gov.au');\ncy.title().should('contain', 'Home');",
+              "err": {},
+              "uuid": "31481e34-6242-42a0-b1be-c46173ec7cb1",
+              "parentUUID": "3fa1f565-4087-4601-8ea2-5381092906a1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter data in Central Search box",
+              "fullTitle": "NSW.GOV.AU Home Page Cypress Test Enter data in Central Search box",
+              "timedOut": null,
+              "duration": 3524,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#home-search-autosuggest-input').type('corona');\ncy.get('#home-search-autosuggest > .search-bar__submit').click(); //search result page should have value \ncy.get('.search-results__title > h2').should('have.text', 'Search results for ‘corona’');",
+              "err": {},
+              "uuid": "a50dfdf4-abca-404d-bb4c-e5221bf68cc5",
+              "parentUUID": "3fa1f565-4087-4601-8ea2-5381092906a1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "31481e34-6242-42a0-b1be-c46173ec7cb1",
+            "a50dfdf4-abca-404d-bb4c-e5221bf68cc5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19305,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
